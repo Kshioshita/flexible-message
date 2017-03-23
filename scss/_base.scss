@@ -1,0 +1,62 @@
+// html, body{
+// 	height: 100%;
+// }
+
+// .backgroundOpacity {
+//   width: 100%;
+//   height: 100%;
+//   display: block;
+//   position: relative;
+// }
+
+// .backgroundOpacity::after {
+// 	background: url('../img/water.png') center center fixed no-repeat rgba(72, 126, 142, .8);
+// 	background-size: cover;
+// 	content: "";
+// 	opacity: 0.2;
+// 	top: 0;
+// 	left: 0;
+// 	bottom: 0;
+// 	right: 0;
+// 	position: absolute;
+// 	z-index: -1;   
+// }
+
+html{
+	height: 100%;
+}
+
+body{
+	height: 100%;
+	background: url('../img/water.png') center center fixed no-repeat;
+	background-size: cover;
+	box-shadow: inset 0 0 0 1000px rgba(255,255,255,.8);
+}
+
+main{
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	// align-items: stretch;
+	flex-flow: row wrap;
+}
+
+main p{
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	font-size: 1.8em;
+	width: 30%;
+}
+
+#breathe{
+	font-size: 5em;
+	font-weight: bold;
+}
+
+span{
+	font-weight: bold;
+}
+
+.hide{
+	visibility: hidden;
+}
