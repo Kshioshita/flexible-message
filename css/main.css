@@ -481,7 +481,7 @@ html {
   height: 100%;
 }
 
-body {
+#bod {
   height: 100%;
   background: url("../img/water.png") center center fixed no-repeat;
   background-size: cover;
@@ -503,7 +503,7 @@ main p {
 }
 
 #breathe {
-  font-size: 5em;
+  font-size: 2em;
   font-weight: bold;
 }
 
@@ -512,9 +512,70 @@ span {
 }
 
 .hide {
+  animation-name: hide-animation;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes hide-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.active {
+  animation-name: active-animation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes active-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.noVis {
   visibility: hidden;
 }
 
+.vis {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 916px) {
+  main {
+    flex-flow: column-reverse;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  main p {
+    font-size: 1.25;
+    width: 100%;
+  }
+
+  #breathe {
+    order: 5;
+  }
+
+  .extra {
+    display: none;
+  }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
